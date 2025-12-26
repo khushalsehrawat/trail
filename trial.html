@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>Vyral Studio • AI-Driven Brand & Marketing Agency</title>
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Icons -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg-gradient: radial-gradient(circle at top left, #ffffff 0%, #f7f7fa 40%, #eceffc 100%);
+      --accent: #111827;
+      --accent-soft: rgba(17, 24, 39, 0.7);
+      --primary: #111827;
+      --primary-soft: rgba(17, 24, 39, 0.1);
+      --border-soft: rgba(15, 23, 42, 0.08);
+      --pill-bg: rgba(15, 23, 42, 0.03);
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.08);
+      --radius-xl: 20px;
+      --radius-2xl: 28px;
+    }
+
+    * {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      background: var(--bg-gradient);
+      color: var(--accent);
+    }
+
+    /* Navbar */
+    .navbar {
+      backdrop-filter: blur(22px);
+      background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.85),
+        rgba(243, 244, 255, 0.9)
+      );
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.07);
+      border-radius: 999px;
+      margin: 16px auto;
+      padding-inline: 1.4rem !important;
+      max-width: 1120px;
+    }
+
+    .navbar-brand {
+      font-family: "Playfair Display", serif;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 10% 0, #111827, #4b5563);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.4);
+    }
+
+    .brand-mark span {
+      color: #f9fafb;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .nav-link {
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent-soft);
+      padding-inline: 0.9rem !important;
+    }
+
+    .nav-link.active,
+    .nav-link:hover {
+      color: var(--accent);
+    }
+
+    .btn-pill {
+      border-radius: 999px;
+      padding: 0.55rem 1.4rem;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border: 1px solid rgba(15, 23, 42, 0.16);
+      background: #111827;
+      color: #f9fafb;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.45);
+    }
+
+    .btn-pill:hover {
+      background: #020617;
+      color: #fff;
+      border-color: #020617;
+    }
+
+    /* Hero */
+    .hero {
+      padding-top: 120px;
+      padding-bottom: 80px;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: var(--pill-bg);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .hero-tag i {
+      font-size: 0.7rem;
+    }
+
+    .hero-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.4rem, 4vw, 3.4rem);
+      line-height: 1.1;
+      margin-top: 18px;
+      margin-bottom: 16px;
+    }
+
+    .hero-highlight {
+      background: linear-gradient(120deg, #111827, #4b5563);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-sub {
+      font-size: 0.98rem;
+      color: rgba(15, 23, 42, 0.7);
+      max-width: 430px;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .btn-ghost {
+      border-radius: 999px;
+      padding: 0.55rem 1.4rem;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border: 1px solid rgba(15, 23, 42, 0.16);
+      background: transparent;
+      color: var(--accent);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(15, 23, 42, 0.04);
+    }
+
+    .hero-micro-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 26px;
+      font-size: 0.78rem;
+      color: rgba(15, 23, 42, 0.7);
+    }
+
+    .hero-micro-badges span {
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px dashed rgba(15, 23, 42, 0.18);
+      background: white;
+    }
+
+    .hero-card {
+      border-radius: var(--radius-2xl);
+      padding: 24px 24px 22px;
+      background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.95),
+        rgba(243, 244, 255, 0.98)
+      );
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border-soft);
+    }
+
+    .metric-pill {
+      border-radius: 16px;
+      padding: 10px 14px;
+      background: rgba(15, 23, 42, 0.03);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      font-size: 0.8rem;
+    }
+
+    .metric-pill strong {
+      font-size: 1.1rem;
+    }
+
+    .hero-video-placeholder {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      background: radial-gradient(circle at top, #111827, #4b5563);
+      min-height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-video-placeholder::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.16), transparent);
+      mix-blend-mode: screen;
+    }
+
+    .hero-video-inner {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: #e5e7eb;
+    }
+
+    .hero-video-inner i {
+      font-size: 2.4rem;
+      padding: 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(248, 250, 252, 0.5);
+      margin-bottom: 10px;
+      display: inline-flex;
+    }
+
+    .hero-video-inner p {
+      margin: 0;
+      font-size: 0.85rem;
+      opacity: 0.9;
+    }
+
+    .trust-row {
+      margin-top: 18px;
+      font-size: 0.76rem;
+      color: rgba(15, 23, 42, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .trust-logos {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      opacity: 0.7;
+      font-size: 0.76rem;
+    }
+
+    .trust-logos span {
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Sections */
+    section {
+      padding-block: 70px;
+    }
+
+    .section-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.26em;
+      color: rgba(15, 23, 42, 0.5);
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.9rem;
+      margin-bottom: 6px;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: rgba(15, 23, 42, 0.7);
+      max-width: 520px;
+      margin: 0 auto 40px;
+    }
+
+    /* Services */
+    .service-card {
+      border-radius: var(--radius-xl);
+      padding: 24px 20px;
+      background: #ffffff;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.04);
+      transition: transform 220ms ease, box-shadow 220ms ease,
+        border-color 220ms ease, background 220ms ease;
+      height: 100%;
+    }
+
+    .service-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--primary-soft);
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .service-card h5 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .service-card p {
+      font-size: 0.9rem;
+      color: rgba(15, 23, 42, 0.7);
+      margin-bottom: 10px;
+    }
+
+    .service-meta {
+      font-size: 0.8rem;
+      color: rgba(15, 23, 42, 0.7);
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+      border-color: rgba(15, 23, 42, 0.18);
+      background: linear-gradient(
+        145deg,
+        #ffffff,
+        rgba(248, 250, 252, 0.98)
+      );
+    }
+
+    /* Showcase */
+    .case-card {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      background: #ffffff;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.05);
+      transition: transform 220ms ease, box-shadow 220ms ease,
+        border-color 220ms ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .case-img {
+      position: relative;
+      padding-top: 62%;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .case-tag {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      padding: 5px 10px;
+      font-size: 0.75rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.76);
+      color: #f9fafb;
+    }
+
+    .case-body {
+      padding: 18px 18px 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .case-body h5 {
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    .case-body p {
+      font-size: 0.9rem;
+      color: rgba(15, 23, 42, 0.7);
+      margin-bottom: 0;
+    }
+
+    .case-metrics {
+      margin-top: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 0.8rem;
+      color: rgba(15, 23, 42, 0.8);
+    }
+
+    .case-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.09);
+      border-color: rgba(15, 23, 42, 0.2);
+    }
+
+    /* Process */
+    .step {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+
+    .step-index {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      border: 1px solid rgba(15, 23, 42, 0.16);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 600;
+      background: #ffffff;
+    }
+
+    .step h6 {
+      font-size: 0.92rem;
+      margin-bottom: 4px;
+    }
+
+    .step p {
+      font-size: 0.86rem;
+      color: rgba(15, 23, 42, 0.8);
+      margin-bottom: 0;
+    }
+
+    .process-card {
+      border-radius: var(--radius-xl);
+      padding: 20px 18px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--border-soft);
+    }
+
+    /* Testimonials */
+    .testimonial-card {
+      border-radius: var(--radius-xl);
+      padding: 20px 20px 18px;
+      background: linear-gradient(
+        135deg,
+        #ffffff,
+        rgba(248, 250, 252, 0.98)
+      );
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+      height: 100%;
+    }
+
+    .testimonial-quote {
+      font-size: 0.9rem;
+      color: rgba(15, 23, 42, 0.9);
+      margin-bottom: 12px;
+    }
+
+    .testimonial-meta {
+      font-size: 0.8rem;
+      color: rgba(15, 23, 42, 0.7);
+    }
+
+    /* Pricing */
+    .pricing-card {
+      border-radius: var(--radius-2xl);
+      padding: 26px 22px;
+      background: #ffffff;
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow-soft);
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .badge-popular {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #111827;
+      color: #f9fafb;
+    }
+
+    .pricing-title {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: rgba(15, 23, 42, 0.7);
+      margin-bottom: 6px;
+    }
+
+    .pricing-price {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .pricing-sub {
+      font-size: 0.85rem;
+      color: rgba(15, 23, 42, 0.7);
+      margin-bottom: 12px;
+    }
+
+    .pricing-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 16px;
+      font-size: 0.85rem;
+    }
+
+    .pricing-list li {
+      margin-bottom: 8px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .pricing-list i {
+      font-size: 0.75rem;
+      margin-top: 2px;
+    }
+
+    /* FAQ */
+    .faq-item {
+      border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+      padding-block: 16px;
+    }
+
+    .faq-q {
+      font-size: 0.95rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .faq-a {
+      font-size: 0.85rem;
+      color: rgba(15, 23, 42, 0.8);
+      margin-top: 8px;
+      display: none;
+    }
+
+    /* Contact */
+    .contact-card {
+      border-radius: var(--radius-2xl);
+      padding: 24px 20px 22px;
+      background: linear-gradient(
+        145deg,
+        #111827,
+        #020617
+      );
+      color: #e5e7eb;
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.8);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-card::after {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(
+        circle at top right,
+        rgba(248, 250, 252, 0.12),
+        transparent
+      );
+      opacity: 0.8;
+    }
+
+    .contact-inner {
+      position: relative;
+      z-index: 2;
+    }
+
+    .contact-card h3 {
+      font-family: "Playfair Display", serif;
+      margin-bottom: 4px;
+    }
+
+    .contact-card p {
+      font-size: 0.9rem;
+      opacity: 0.9;
+      margin-bottom: 12px;
+    }
+
+    .contact-mini {
+      font-size: 0.8rem;
+      opacity: 0.85;
+    }
+
+    .form-control,
+    .form-select {
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      font-size: 0.9rem;
+      padding: 0.6rem 0.9rem;
+      background: transparent;
+      color: #e5e7eb;
+    }
+
+    .form-control::placeholder {
+      color: rgba(156, 163, 175, 0.9);
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+      box-shadow: none;
+      border-color: #f9fafb;
+      background: transparent;
+      color: #f9fafb;
+    }
+
+    .btn-contact {
+      border-radius: 999px;
+      padding: 0.65rem 1.6rem;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      background: #f9fafb;
+      color: #020617;
+      border: none;
+    }
+
+    .btn-contact:hover {
+      background: #e5e7eb;
+      color: #020617;
+    }
+
+    /* Footer */
+    footer {
+      padding: 24px 0 30px;
+      font-size: 0.8rem;
+      color: rgba(15, 23, 42, 0.7);
+    }
+
+    .footer-links a {
+      color: rgba(15, 23, 42, 0.7);
+      text-decoration: none;
+      margin-left: 10px;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 450ms ease, transform 450ms ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 992px) {
+      .navbar {
+        border-radius: 18px;
+      }
+
+      .hero {
+        padding-top: 110px;
+      }
+
+      .hero-card {
+        margin-top: 28px;
+      }
+
+      .section-subtitle {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .navbar {
+        margin-inline: 8px;
+        padding-inline: 1rem !important;
+      }
+
+      .hero-title {
+        font-size: 2.2rem;
+      }
+
+      .hero-card {
+        padding: 18px 16px;
+      }
+
+      .contact-card {
+        padding: 20px 18px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top px-3">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="#top">
+        <div class="brand-mark"><span>V</span></div>
+        Vyral Studio
+      </a>
+      <button
+        class="navbar-toggler border-0"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navMenu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#showcase">Work</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#process">Process</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pricing">Packages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="d-none d-lg-flex">
+        <a href="#contact" class="btn btn-pill">
+          Book a Strategy Call
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <main id="top" class="hero container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <span class="hero-tag">
+          <i class="fa-regular fa-circle-check"></i>
+          AI-Driven Creative Marketing Studio
+        </span>
+        <h1 class="hero-title">
+          We turn your <span class="hero-highlight">brand</span> into
+          a quiet obsession.
+        </h1>
+        <p class="hero-sub">
+          Vyral Studio builds premium websites, iconic logos, AI-generated
+          campaigns, and lip-sync video ads that make your brand unforgettable
+          in seconds.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-pill">
+            Start Your Project
+          </a>
+          <button class="btn btn-ghost" type="button" onclick="document.getElementById('showcase').scrollIntoView({behavior:'smooth'})">
+            View Selected Work
+          </button>
+        </div>
+
+        <div class="hero-micro-badges">
+          <span><i class="fa-solid fa-bolt pe-1"></i>Launch-ready in 10–21 days</span>
+          <span><i class="fa-solid fa-wand-magic-sparkles pe-1"></i>AI product visuals & lip-sync ads</span>
+          <span><i class="fa-solid fa-shield-heart pe-1"></i>Conversion-first, privacy-safe setup</span>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="hero-card reveal">
+          <div class="row g-3">
+            <div class="col-md-6 d-flex flex-column">
+              <div class="metric-pill mb-2">
+                <div class="d-flex justify-content-between align-items-end">
+                  <div>
+                    <small class="text-muted text-uppercase" style="letter-spacing:0.14em;">Avg. ROI</small>
+                    <div><strong>4.7x</strong></div>
+                  </div>
+                  <small class="text-muted">on launch campaigns</small>
+                </div>
+              </div>
+              <div class="metric-pill mb-2">
+                <small class="text-muted text-uppercase" style="letter-spacing:0.14em;">Industries</small><br />
+                D2C, tech, creators, clinics, agencies, education & more.
+              </div>
+              <div class="metric-pill">
+                <small class="text-muted text-uppercase" style="letter-spacing:0.14em;">What we build</small><br />
+                Websites • Logos • AI product shots • Lip-sync reels • Landing pages • Ad creatives.
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="hero-video-placeholder">
+                <!-- Use your own thumbnail/video later -->
+                <div class="hero-video-inner">
+                  <i class="fa-solid fa-circle-play"></i>
+                  <p>30-sec reel breakdown of how we scale brands from “present” to “premium”.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="trust-row mt-3">
+            <div>Subtle, premium, high-trust brand experiences.</div>
+            <div class="trust-logos">
+              <span>Early-stage startups</span>
+              <span>Personal brands</span>
+              <span>Design-led SMEs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <div class="text-center mb-4">
+        <div class="section-label">SERVICES</div>
+        <h2 class="section-title">Everything your brand needs in one studio.</h2>
+        <p class="section-subtitle">
+          We combine strategy, design, and AI to craft digital experiences
+          that feel premium, clean, and quietly powerful — without noise
+          and clutter.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <h5>Conversion-Focused Websites</h5>
+            <p>
+              Minimalist, high-trust websites built with modern stacks that
+              load fast, feel luxurious, and guide visitors to say “yes”.
+            </p>
+            <div class="service-meta">
+              • Landing pages, full sites, portals<br />
+              • Copy, layout, basic SEO included
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <i class="fa-solid fa-pen-nib"></i>
+            </div>
+            <h5>Logo & Visual Identity</h5>
+            <p>
+              Timeless wordmarks and symbols, refined color systems, and
+              brand guidelines that make every touchpoint feel intentional.
+            </p>
+            <div class="service-meta">
+              • Logo suite, typography, color system<br />
+              • Social & packaging mockups
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <i class="fa-solid fa-robot"></i>
+            </div>
+            <h5>AI-Driven Product Visuals</h5>
+            <p>
+              Hyper-real product shots and lifestyle scenes created with
+              AI, tuned to look natural — not “AI-ish”.
+            </p>
+            <div class="service-meta">
+              • Catalogs, hero shots, lifestyle scenes<br />
+              • Consistent lighting & perspective
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <i class="fa-solid fa-microphone-lines"></i>
+            </div>
+            <h5>Lip-Sync Social Ads</h5>
+            <p>
+              Scripted, lip-sync videos where your product speaks for you —
+              perfect for reels, shorts, and UGC-style campaigns.
+            </p>
+            <div class="service-meta">
+              • Script, captions, hooks<br />
+              • Platform-ready exports
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <i class="fa-solid fa-sparkles"></i>
+            </div>
+            <h5>Launch Funnels & Automations</h5>
+            <p>
+              Lead capture, email flows, and tracking infrastructure so your
+              brand doesn’t just look good — it converts.
+            </p>
+            <div class="service-meta">
+              • Lead forms & CRM setup<br />
+              • Analytics & simple automations
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <h5>Retainer Creative Support</h5>
+            <p>
+              Monthly partner for brands that need ongoing design, landing
+              pages, and content without building an in-house team.
+            </p>
+            <div class="service-meta">
+              • Priority turnaround<br />
+              • Fixed, transparent monthly fees
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase -->
+  <section id="showcase">
+    <div class="container">
+      <div class="text-center mb-4">
+        <div class="section-label">SELECTED WORK</div>
+        <h2 class="section-title">Quietly loud results.</h2>
+        <p class="section-subtitle">
+          A glimpse into the kind of clarity, calm, and conversion power we
+          bring to brands — from early-stage founders to established teams.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="case-card reveal">
+            <div
+              class="case-img"
+              style="background-image:url('https://images.pexels.com/photos/3730760/pexels-photo-3730760.jpeg?auto=compress&cs=tinysrgb&w=1200');"
+            >
+              <span class="case-tag">D2C • Website + Brand</span>
+            </div>
+            <div class="case-body">
+              <h5>Glowline Skin Co.</h5>
+              <p>
+                Minimalist ecommerce site with soft gradients, clinical
+                typography, and AI-generated lifestyle visuals.
+              </p>
+              <div class="case-metrics">
+                <span>+62% time on site</span>
+                <span>+35% add-to-cart</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="case-card reveal">
+            <div
+              class="case-img"
+              style="background-image:url('https://images.pexels.com/photos/1181673/pexels-photo-1181673.jpeg?auto=compress&cs=tinysrgb&w=1200');"
+            >
+              <span class="case-tag">SaaS • Launch Landing</span>
+            </div>
+            <div class="case-body">
+              <h5>Clarity Metrics</h5>
+              <p>
+                Investor-ready landing page with narrative structure, motion
+                accents, and clean data-first visuals.
+              </p>
+              <div class="case-metrics">
+                <span>3.1x demo requests</span>
+                <span>Fundraise-ready collateral</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="case-card reveal">
+            <div
+              class="case-img"
+              style="background-image:url('https://images.pexels.com/photos/6898859/pexels-photo-6898859.jpeg?auto=compress&cs=tinysrgb&w=1200');"
+            >
+              <span class="case-tag">Creator • AI Reels</span>
+            </div>
+            <div class="case-body">
+              <h5>Studio Persona</h5>
+              <p>
+                Series of lip-sync product explainers for a creator brand,
+                auto-captioned and scheduled for weekly drops.
+              </p>
+              <div class="case-metrics">
+                <span>+240% reel saves</span>
+                <span>Consistent visual identity</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process & Testimonials -->
+  <section id="process">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-6">
+          <div class="section-label">PROCESS</div>
+          <h2 class="section-title">Clarity first. Design second. Hype last.</h2>
+          <p class="section-subtitle text-start mb-4">
+            We keep things simple — a clear process that respects your time
+            and delivers without drama.
+          </p>
+
+          <div class="process-card reveal">
+            <div class="step">
+              <div class="step-index">1</div>
+              <div>
+                <h6>Discovery & Fit Check</h6>
+                <p>
+                  20-minute call to understand your product, audience, and
+                  constraints. If we’re not the right fit, we’ll say so.
+                </p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-index">2</div>
+              <div>
+                <h6>Strategy & Blueprint</h6>
+                <p>
+                  A crisp one-page plan: key messages, visual direction,
+                  funnel, and deliverables with timelines and investment.
+                </p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-index">3</div>
+              <div>
+                <h6>Design, Build & AI Production</h6>
+                <p>
+                  We design your brand, build the website, generate AI
+                  assets, and create lip-sync creatives in tight feedback loops.
+                </p>
+              </div>
+            </div>
+            <div class="step mb-0">
+              <div class="step-index">4</div>
+              <div>
+                <h6>Launch, Measure & Refine</h6>
+                <p>
+                  Launch with tracking in place. We observe live data, fix
+                  friction points, and ship refinements post-launch.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p class="mt-3" style="font-size:0.82rem; color:rgba(15,23,42,0.7);">
+            <i class="fa-solid fa-circle-info me-1"></i>
+            We take on a limited number of builds each month to keep work
+            sharp. If your launch is time-sensitive, mention the date when you
+            reach out.
+          </p>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="section-label">PROOF</div>
+          <h2 class="section-title">What our clients actually say.</h2>
+
+          <div class="row g-3 mt-2">
+            <div class="col-md-12">
+              <div class="testimonial-card reveal">
+                <div class="mb-1" style="font-size:1.2rem;">“</div>
+                <div class="testimonial-quote">
+                  “We wanted a clean website and got a full visual language.
+                  Our visitors immediately understood what we do — no more
+                  confused calls. We closed our next 5 clients straight from
+                  the new landing page.”
+                </div>
+                <div class="testimonial-meta">
+                  <strong>Founder, boutique consultancy</strong>
+                  <br />
+                  Site, logo, AI imagery, launch support
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="testimonial-card reveal">
+                <div class="testimonial-quote">
+                  “Their lip-sync ads outperformed everything we’d shot in
+                  studio. Simple scripts, strong hooks, and zero overthinking.”
+                </div>
+                <div class="testimonial-meta">
+                  Growth lead, D2C brand
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="testimonial-card reveal">
+                <div class="testimonial-quote">
+                  “The whole experience was calm. No chaos, no clutter, just a
+                  sharp process and a site that finally feels like us.”
+                </div>
+                <div class="testimonial-meta">
+                  Creative studio owner
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ -->
+          <div class="mt-4 reveal">
+            <div class="section-label">FAQ</div>
+            <div class="faq-item">
+              <div class="faq-q">
+                <span>How quickly can we start?</span>
+                <i class="fa-solid fa-plus small"></i>
+              </div>
+              <div class="faq-a">
+                Typically within 7–14 days. If you have a hard launch date, we’ll
+                check availability on our first call.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">
+                <span>Do you work with early-stage or solo founders?</span>
+                <i class="fa-solid fa-plus small"></i>
+              </div>
+              <div class="faq-a">
+                Yes. A large part of our work is for lean, product-focused
+                founders who want a premium presence without building an in-house team.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">
+                <span>Can we use your AI visuals and lip-sync assets in paid ads?</span>
+                <i class="fa-solid fa-plus small"></i>
+              </div>
+              <div class="faq-a">
+                Absolutely. We design with paid performance in mind, and we
+                deliver platform-ready files for Meta, Google, and more.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing">
+    <div class="container">
+      <div class="text-center mb-4">
+        <div class="section-label">PACKAGES</div>
+        <h2 class="section-title">Transparent, project-based pricing.</h2>
+        <p class="section-subtitle">
+          No mystery retainers. No surprise fees. We quote in advance and
+          stay inside the lines.
+        </p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="pricing-card reveal">
+            <div class="pricing-title">Launch Lite</div>
+            <div class="pricing-price">₹</div>
+            <div class="pricing-sub">For early-stage founders validating a single offer.</div>
+            <ul class="pricing-list">
+              <li>
+                <i class="fa-solid fa-check"></i>
+                <span>Single-page landing website</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>
+                <span>Brand mini-system (colors, fonts, basic logo)</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>
+                <span>1 set of AI product or service visuals</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>
+                <span>Basic analytics & lead capture</span>
+              </li>
+            </ul>
+            <button class="btn btn-ghost w-100" type="button" onclick="scrollToContact('Launch Lite')">
+              Discuss this package
+            </button>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="pricing-card reveal">
+            <span class="badge-popular">Most chosen</span>
+            <div class="pricing-title">Signature Build</div>
+            <div class="pricing-price">₹₹</div>
+            <div class="pricing-sub">For brands ready to scale and look the part.</div>
+            <ul class="pricing-list">
+              <li>
+                <i class="fa-solid fa-check"></i>
+                <span>Multi-page website (up to 6 core pages)</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>
+                <span>Full logo & identity system with guidelines</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>
+                <span>AI product shots + lifestyle scenes</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>
+                <span>3–5 lip-sync short-form ad variations</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>
+                <span>Launch tracking + 1 refinement cycle</span>
+              </li>
+            </ul>
+            <button class="btn btn-pill w-100" type="button" onclick="scrollToContact('Signature Build')">
+              Apply for this build
+            </button>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="pricing-card reveal">
+            <div class="pricing-title">Partner Retainer</div>
+            <div class="pricing-price">Custom</div>
+            <div class="pricing-sub">For teams needing an ongoing creative partner.</div>
+            <ul class="pricing-list">
+              <li>
+                <i class="fa-solid fa-check"></i>
+                <span>Dedicated monthly hours & priority support</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>
+                <span>New pages, campaigns & design assets</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>
+                <span>Quarterly funnel and brand review</span>
+              </li>
+            </ul>
+            <button class="btn btn-ghost w-100" type="button" onclick="scrollToContact('Partner Retainer')">
+              Talk about a retainer
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <div class="section-label">CONTACT</div>
+          <h2 class="section-title">Let’s design the next version of your brand.</h2>
+          <p class="section-subtitle text-start mb-3">
+            Share a few details and we’ll get back within one business day
+            with a short note and a link to book a call.
+          </p>
+
+          <ul style="font-size:0.9rem; padding-left:1rem;">
+            <li>We don’t outsource — you work directly with our core team.</li>
+            <li>No pushy sales calls. If we’re not a fit, we’ll tell you.</li>
+            <li>International clients welcome. We work async-first.</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="contact-card reveal">
+            <div class="contact-inner">
+              <h3>Project enquiry</h3>
+              <p>Tell us where you are, where you want to go, and by when.</p>
+
+              <form onsubmit="handleSubmit(event)">
+                <div class="mb-2">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
+                <div class="mb-2">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Work email"
+                    required
+                  />
+                </div>
+                <div class="mb-2">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="brand"
+                    placeholder="Brand / company"
+                  />
+                </div>
+                <div class="mb-2">
+                  <select class="form-select" id="projectType">
+                    <option selected>Project type</option>
+                    <option>Website + branding</option>
+                    <option>Logo & identity only</option>
+                    <option>AI visuals & lip-sync ads</option>
+                    <option>Full launch package</option>
+                    <option>Monthly creative retainer</option>
+                  </select>
+                </div>
+                <div class="mb-2">
+                  <textarea
+                    id="details"
+                    class="form-control"
+                    rows="2"
+                    placeholder="Timeline, links, and anything we should know"
+                    style="border-radius:18px; resize:none;"
+                  ></textarea>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                  <button class="btn btn-contact" type="submit">
+                    Send enquiry
+                  </button>
+                  <div class="contact-mini">
+                    Or email: hello@vyralstudio.com<br />
+                    Avg. reply time: under 24 hours
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <div>© <span id="year"></span> Vyral Studio. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="#top">Back to top</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Start a project</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Current year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Scroll reveal animation
+    const reveals = document.querySelectorAll(".reveal");
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    reveals.forEach((el) => revealObserver.observe(el));
+
+    // FAQ toggle
+    document.querySelectorAll(".faq-q").forEach((q) => {
+      q.addEventListener("click", () => {
+        const answer = q.nextElementSibling;
+        const icon = q.querySelector("i");
+
+        const isOpen = answer.style.display === "block";
+        document.querySelectorAll(".faq-a").forEach((a) => (a.style.display = "none"));
+        document.querySelectorAll(".faq-q i").forEach((i) => i.classList.replace("fa-minus", "fa-plus"));
+
+        if (!isOpen) {
+          answer.style.display = "block";
+          icon.classList.replace("fa-plus", "fa-minus");
+        }
+      });
+    });
+
+    // Scroll to contact with package pre-fill (console log – integrate with backend later)
+    function scrollToContact(pkg) {
+      document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+      console.log("Interested in package:", pkg);
+    }
+
+    // Form submit handler (front-end only)
+    function handleSubmit(e) {
+      e.preventDefault();
+      alert("Thank you! We’ll review your project details and get back within 24 hours.");
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
