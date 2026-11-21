@@ -1,0 +1,13 @@
+{
+  "sites": [
+    {
+      "name": "trail",
+      "root": ".",
+      "base_url": "https://khushalsehrawat.github.io/trail/",
+      "pages": {
+        "index.html": "https://khushalsehrawat.github.io/trail/",
+        "trial.html": "https://khushalsehrawat.github.io/trail/trial.html"
+      }
+    }
+  ]
+}
