@@ -15,14 +15,17 @@ External styles, fonts, scripts and images require an internet connection. There
 
 ## SEO metadata
 
-Both pages include page-specific descriptions, developer author/creator metadata, Open Graph metadata and Twitter card metadata. The homepage includes one WebSite JSON-LD block identifying TheBenzzCreations as creator, and one visible developer credit in the existing footer. The promotional credit uses `rel="nofollow"`.
+Both pages include page-specific descriptions, developer author/creator metadata, Open Graph metadata and Twitter card metadata. The homepage includes one WebSite JSON-LD block identifying TheBenzzCreations as creator, and one visible developer credit in the existing footer. The developer credit uses a normal same-tab hyperlink.
 
 This repository's public deployment URL has not been verified. Canonical links, `og:url` and the WebSite `url` are omitted until that URL is confirmed. Do not use the developer website or assume that links in the page establish this repository's canonical address. No dedicated social preview image is configured. Structured data does not guarantee search rich results.
 
-## Development
+## Development & Maintenance
 
-Developed by [TheBenzzCreations](https://www.thebenzzcreations.com/).
+**Developed & Maintained by
+[Khushal Sehrawat](https://github.com/khushalsehrawat)**
+— Founder of
+[TheBenzzCreations](https://www.thebenzzcreations.com/).
 
-TheBenzzCreations builds custom websites, mobile applications, business software, e-commerce platforms and AI automation solutions.
+TheBenzzCreations is a digital development studio specializing in website development, custom software, mobile applications, e-commerce solutions and AI-powered business automation.
 
-For development enquiries, visit our official website.
+For development enquiries and collaborations, visit [TheBenzzCreations](https://www.thebenzzcreations.com/).
